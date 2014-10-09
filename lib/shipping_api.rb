@@ -1,5 +1,2 @@
-require "shipping_api/version"
-
-module ShippingApi
-  # Your code goes here...
-end
+require 'shipping_api/version'
+require 'shipping_api/client'
