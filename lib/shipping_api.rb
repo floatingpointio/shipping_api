@@ -1,3 +1,5 @@
 require 'shipping_api/version'
 require 'shipping_api/base_enum'
+require 'shipping_api/response'
+require 'shipping_api/endpoints'
 require 'shipping_api/client'

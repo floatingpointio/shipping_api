@@ -24,8 +24,11 @@ build/
 /.bundle/
 /lib/bundler/man/
 
-# could contain sensitive data
+## Could contain sensitive data
 .env*
+
+## stores VCR cassettes
+spec/fixtures
 
 # for a library or gem, you might want to ignore these files since the code is
 # intended to run in multiple environments; otherwise, check them in:
