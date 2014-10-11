@@ -1,31 +1,6 @@
+![Travis](https://travis-ci.org/floatingpointio/shipping_api.svg?branch=master)
+[![Code Climate](https://codeclimate.com/github/floatingpointio/shipping_api/badges/gpa.svg)](https://codeclimate.com/github/floatingpointio/shipping_api)
+
 # ShippingApi
 
 Client for accessing common shipping APIs.
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'shipping_api'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install shipping_api
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/shipping_api/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
