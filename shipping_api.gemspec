@@ -6,11 +6,11 @@ require 'shipping_api/version'
 Gem::Specification.new do |spec|
   spec.name          = 'shipping_api'
   spec.version       = ShippingApi::VERSION
-  spec.authors       = ['Nikica Jokic']
-  spec.email         = ['neektza@gmail.com']
+  spec.authors       = ['Nikica Jokic','Veljko Dragsic']
+  spec.email         = ['neektza@gmail.com','veljko@floatingpoint.io']
   spec.summary       = 'Gem for accessing an international shipping API.'
   spec.description   = 'Gem for accessing an international shipping API.'
-  spec.homepage      = ''
+  spec.homepage      = 'http://github.com/floatingpointio/shipping_api'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -19,12 +19,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'faraday', '~> 0.9.0'
-  spec.add_dependency 'rspec', '~> 3.1'
-  spec.add_dependency 'webmock', '~> 1.19'
-  spec.add_dependency 'vcr', '~> 2.9'
   spec.add_dependency 'immutable_struct', '~> 1.1.1'
 
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'pry', '~> 0.10'
+  spec.add_development_dependency 'rspec', '~> 3.1'
+  spec.add_development_dependency 'dotenv', '~> 0.11.1'
+  spec.add_development_dependency 'webmock', '~> 1.19'
+  spec.add_development_dependency 'vcr', '~> 2.9'
 end
