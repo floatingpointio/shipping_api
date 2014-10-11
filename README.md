@@ -1,6 +1,6 @@
 # ShippingApi
 
-TODO: Write a gem description
+Client for accessing common shipping APIs.
 
 ## Installation
 
