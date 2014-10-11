@@ -1,5 +1,5 @@
 module ShippingApi
-  class ExWorksType < ComplexType
+  class ExWorksType < BaseEnum
     NAMES = {
       4	=> 'ExWorks',
       44 => 'CashPrepaid'

@@ -1,5 +1,5 @@
 module ShippingApi
-  class NotificationType < ComplexType
+  class NotificationType < BaseEnum
     NAMES = {
       0	=> 'None',
       1	=> 'AutomaticViaEmaie',

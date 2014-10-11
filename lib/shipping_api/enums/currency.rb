@@ -1,5 +1,5 @@
 module ShippingApi
-  class Currency < ComplexType
+  class Currency < BaseEnum
     NAMES = {
       0	=> 'National',
       1	=> 'Euro'

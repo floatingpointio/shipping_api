@@ -1,5 +1,5 @@
 module ShippingApi
-  class CoreValidationException < ComplexType
+  class CoreValidationException < BaseEnum
     NAMES = {
       10_000	=> 'InvalidApiKey',
       10_001	=> 'PickupFromAndToDateMismatch',

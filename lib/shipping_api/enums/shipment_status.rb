@@ -1,5 +1,5 @@
 module ShippingApi
-  class ShipmentStatus < ComplexType
+  class ShipmentStatus < BaseEnum
     NAMES = {
       1	=> 'Pending',
       2	=> 'Successful',

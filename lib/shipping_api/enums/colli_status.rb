@@ -1,5 +1,5 @@
 module ShippingApi
-  class ColliStatus < ComplexType
+  class ColliStatus < BaseEnum
     NAMES = {
       1	=> 'NoPrinting',
       2	=> 'AwaitingPrint',

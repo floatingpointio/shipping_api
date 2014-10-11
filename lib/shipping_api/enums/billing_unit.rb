@@ -1,5 +1,5 @@
 module ShippingApi
-  class BillingUnit < ComplexType
+  class BillingUnit < BaseEnum
     NAMES = {
       12	=> 'LETT',
       13	=> 'SBX',

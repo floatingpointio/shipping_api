@@ -1,5 +1,5 @@
 module ShippingApi
-  class ComplexType
+  class BaseEnum
     def initialize(code)
       @code = code
       fail RangeError, 'unknown code'\

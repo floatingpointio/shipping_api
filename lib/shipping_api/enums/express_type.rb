@@ -1,5 +1,5 @@
 module ShippingApi
-  class ExpressType < ComplexType
+  class ExpressType < BaseEnum
     NAMES = {
       21 => 'T1030',
       22 => 'T0830',

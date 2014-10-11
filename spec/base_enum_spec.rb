@@ -1,7 +1,7 @@
-require 'shipping_api/complex_type'
-require 'shipping_api/complex_types/currency'
+require 'shipping_api/base_enum'
+require 'shipping_api/enums/currency'
 
-describe ShippingApi::ComplexType do
+describe ShippingApi::BaseEnum do
   describe 'initializaion' do
     it 'raises an RangeError when given code is out of range' do
       expect do
