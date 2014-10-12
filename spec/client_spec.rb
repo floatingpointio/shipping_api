@@ -18,12 +18,5 @@ describe ShippingApi::Client do
         c.config.api_key = 'else'
       end.to raise_error(NoMethodError)
     end
-
-    it 'creates faraday connector' do
-      c = ShippingApi::Client.new(api_url, api_key)
-      expect(c.conn.params['ApiKey']).to eq api_key
-      expect(c.conn.url_prefix.to_s).to eq api_url
-    end
-
   end
 end

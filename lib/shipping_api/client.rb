@@ -3,7 +3,6 @@ require 'faraday'
 
 module ShippingApi
 
-  # Represents the Client
   class Client
     include Endpoints
 
@@ -19,7 +18,29 @@ module ShippingApi
     private
 
     def create_conn
-      Faraday.new(@config.api_url, params: {ApiKey: @config.api_key })
+      Faraday.new @config.api_url
+    end
+
+    def _get(endpoint, params={})
+      params = {ApiKey: @config.api_key}.merge params
+
+      handle_response @conn.get endpoint, params
+    end
+
+    def _post(endpoint, params={})
+      params = {ApiKey: @config.api_key}.merge params
+
+      response = @conn.post do |req|
+        req.url 'GetShippingLabelsForAllShipments'
+        req.headers['Content-Type'] = 'application/json'
+        req.body = params.to_json
+      end
+
+      handle_response response
+    end
+
+    def handle_response(response)
+      Response.new response
     end
 
   end
