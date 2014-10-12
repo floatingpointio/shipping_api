@@ -2,9 +2,8 @@ PATH
   remote: .
   specs:
     shipping_api (0.0.1)
-      dotenv
-      faraday (~> 0.9.0)
-      immutable_struct (~> 1.1.1)
+      faraday (~> 0.9)
+      immutable_struct (~> 1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -51,6 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.7)
+  dotenv (~> 0.11)
   pry (~> 0.10)
   rake (~> 10.0)
   rspec (~> 3.1)

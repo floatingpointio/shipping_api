@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Nikica Jokic','Veljko Dragsic']
   spec.email         = ['neektza@gmail.com','veljko@floatingpoint.io']
   spec.summary       = 'Gem for accessing an international shipping API.'
-  spec.description   = 'Gem for accessing an international shipping API.'
+  spec.description   = 'Wrapping client for REST API'
   spec.homepage      = 'http://github.com/floatingpointio/shipping_api'
   spec.license       = 'MIT'
 
@@ -18,14 +18,14 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'faraday', '~> 0.9.0'
-  spec.add_dependency 'immutable_struct', '~> 1.1.1'
+  spec.add_dependency 'faraday', '~> 0.9'
+  spec.add_dependency 'immutable_struct', '~> 1.1'
 
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'pry', '~> 0.10'
   spec.add_development_dependency 'rspec', '~> 3.1'
-  spec.add_development_dependency 'dotenv', '~> 0.11.1'
+  spec.add_development_dependency 'dotenv', '~> 0.11'
   spec.add_development_dependency 'webmock', '~> 1.19'
   spec.add_development_dependency 'vcr', '~> 2.9'
 end
