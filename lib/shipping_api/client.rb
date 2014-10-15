@@ -41,7 +41,7 @@ module ShippingAPI
     def handle_response(raw_response)
       response = Response.new raw_response
 
-      response.valid? ? response.data : response.errors
+      response.valid? ? response.data : { errors: response.errors }
     end
   end
 end
