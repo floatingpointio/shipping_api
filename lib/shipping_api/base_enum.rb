@@ -13,8 +13,5 @@ module ShippingAPI
     def description
       self.class::DESCRIPTIONS[@code]
     end
-
-    def to_json
-    end
   end
 end
