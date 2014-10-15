@@ -31,7 +31,7 @@ module ShippingApi
       params = {ApiKey: @config.api_key}.merge params
 
       response = @conn.post do |req|
-        req.url 'GetShippingLabelsForAllShipments'
+        req.url endpoint
         req.headers['Content-Type'] = 'application/json'
         req.body = params.to_json
       end

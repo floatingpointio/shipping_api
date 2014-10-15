@@ -1,5 +1,6 @@
 require 'json'
 require 'andand'
+require 'shipping_api/enums/core_validation_exception'
 
 module ShippingApi
   class Response
