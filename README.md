@@ -39,17 +39,17 @@ response = client.get_locations
 All response objects are actually Hashes. Depending on the success of the request, the response contains either the fields of the resource specified by the API documentation, or the errors that caused the request to fail.
 
 The valid response:
-```json
+```ruby
 {
-  "PostalLocations"=> [
-    {"Name"=>"Some Location", "PostalCode"=>"10000"},
-    {"Name"=>"Another Location", "PostalCode"=>"90000"}
+  "PostalLocations": [
+    {"Name":"Some Location", "PostalCode":"10000"},
+    {"Name":"Another Location", "PostalCode":"90000"}
   ]
 }
 ```
 
 The invalid response:
-```
+```ruby
 {
   errors: {
     model: [{code: 10000, msg: 'InvalidApiKey'},...],
