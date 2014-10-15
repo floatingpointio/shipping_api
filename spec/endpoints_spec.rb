@@ -27,15 +27,9 @@ describe ShippingApi::Endpoints do
 
   describe '#get_locations' do
     it 'gets locations by name' do
-
       VCR.use_cassette('get_locations') do
         response = @client.get_locations('zagreb')
-
-        expect(response.data['PostalLocations']).to be_kind_of Array
-
-        expect(response.valid?).to be true
-        expect(response.model_errors).to be nil
-        expect(response.validation_errors).to be nil
+        expect(response['PostalLocations']).to be_kind_of Array
       end
     end
   end

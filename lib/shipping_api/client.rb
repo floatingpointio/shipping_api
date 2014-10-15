@@ -39,8 +39,10 @@ module ShippingApi
       handle_response response
     end
 
-    def handle_response(response)
-      Response.new response
+    def handle_response(raw_response)
+      response = Response.new raw_response
+
+      response.valid? ? response.data : response.errors
     end
 
   end

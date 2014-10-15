@@ -1,25 +1,50 @@
 require 'json'
+require 'andand'
 
 module ShippingApi
   class Response
 
-    attr_reader :data, :raw
+    EXCLUDED_ATTRS = %w(IsValid ModelErrors ValidationErrors)
+
+    attr_reader :body, :raw, :errors
 
     def initialize(response)
       @raw  = response
-      @data = JSON.parse response.body
+      @body = JSON.parse response.body
+      @errors = {
+        validation: validation_errors,
+        model: model_errors
+      }
     end
 
     def valid?
-      @data['IsValid']
+      @body['IsValid']
     end
 
+    def data
+      cloned = @body.clone
+      EXCLUDED_ATTRS.each {|attr| cloned.delete attr}
+      cloned
+    end
+
+    private
+
     def model_errors
-      @data['ModelErrors']
+      @body['ModelErrors'].andand.map do |key, value|
+        {
+          field: key,
+          msg: value
+        }
+      end
     end
 
     def validation_errors
-      @data['ValidationErrors']
+      @body['ValidationErrors'].andand.map do |code|
+        {
+          code: code,
+          msg: CoreValidationException.new(code).name,
+        }
+      end
     end
 
   end
