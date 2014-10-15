@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class CoreValidationException < BaseEnum
     NAMES = {
       10_000	=> 'InvalidApiKey',

@@ -2,9 +2,8 @@ require 'json'
 require 'andand'
 require 'shipping_api/enums/core_validation_exception'
 
-module ShippingApi
+module ShippingAPI
   class Response
-
     EXCLUDED_ATTRS = %w(IsValid ModelErrors ValidationErrors)
 
     attr_reader :body, :raw, :errors
@@ -24,7 +23,7 @@ module ShippingApi
 
     def data
       cloned = @body.clone
-      EXCLUDED_ATTRS.each {|attr| cloned.delete attr}
+      EXCLUDED_ATTRS.each { |attr| cloned.delete attr }
       cloned
     end
 
@@ -43,10 +42,9 @@ module ShippingApi
       @body['ValidationErrors'].andand.map do |code|
         {
           code: code,
-          msg: CoreValidationException.new(code).name,
+          msg: CoreValidationException.new(code).name
         }
       end
     end
-
   end
 end

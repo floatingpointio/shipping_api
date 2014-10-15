@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class ExWorksType < BaseEnum
     NAMES = {
       4	=> 'ExWorks',

@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   module Endpoints
 
     def get_shipment_status_by_shipment_id(id)

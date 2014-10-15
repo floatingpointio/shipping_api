@@ -1,6 +1,6 @@
 require 'shipping_api/response'
 
-describe ShippingApi::Response do
+describe ShippingAPI::Response do
   describe '#initialize' do
 
     valid_response = {
@@ -28,12 +28,12 @@ describe ShippingApi::Response do
     end
 
     it 'returns hash containing data from response with stripped out error fields on success' do
-      response = ShippingApi::Response.new faked_client.get '/api/valid/response'
+      response = ShippingAPI::Response.new faked_client.get '/api/valid/response'
       expect(response.data).to eq({'Foo' => 'bar', 'Bar' => 'baz'})
     end
 
     it 'returns hash containing model and validation errors on failure' do
-      response = ShippingApi::Response.new faked_client.get '/api/invalid/response'
+      response = ShippingAPI::Response.new faked_client.get '/api/invalid/response'
 
       expect(response.errors[:validation]).to eq [{code: 10000, msg: 'InvalidApiKey'},
                                                   {code: 10001, msg: 'PickupFromAndToDateMismatch'}]

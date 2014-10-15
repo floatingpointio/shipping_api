@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class BaseEnum
     def initialize(code)
       @code = code

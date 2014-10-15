@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class ShipmentStatus < BaseEnum
     NAMES = {
       1	=> 'Pending',

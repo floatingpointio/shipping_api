@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class ExpressType < BaseEnum
     NAMES = {
       21 => 'T1030',

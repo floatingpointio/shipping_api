@@ -1,8 +1,7 @@
 require 'immutable_struct'
 require 'faraday'
 
-module ShippingApi
-
+module ShippingAPI
   class Client
     include Endpoints
 
@@ -21,14 +20,14 @@ module ShippingApi
       Faraday.new @config.api_url
     end
 
-    def _get(endpoint, params={})
-      params = {ApiKey: @config.api_key}.merge params
+    def _get(endpoint, params = {})
+      params = { ApiKey: @config.api_key }.merge params
 
       handle_response @conn.get endpoint, params
     end
 
-    def _post(endpoint, params={})
-      params = {ApiKey: @config.api_key}.merge params
+    def _post(endpoint, params = {})
+      params = { ApiKey: @config.api_key }.merge params
 
       response = @conn.post do |req|
         req.url endpoint
@@ -44,6 +43,5 @@ module ShippingApi
 
       response.valid? ? response.data : response.errors
     end
-
   end
 end

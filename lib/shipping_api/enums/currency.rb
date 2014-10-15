@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class Currency < BaseEnum
     NAMES = {
       0	=> 'National',

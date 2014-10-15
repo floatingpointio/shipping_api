@@ -5,7 +5,7 @@ require 'shipping_api/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'shipping_api'
-  spec.version       = ShippingApi::VERSION
+  spec.version       = ShippingAPI::VERSION
   spec.authors       = ['Nikica Jokic','Veljko Dragsic']
   spec.email         = ['neektza@gmail.com','veljko@floatingpoint.io']
   spec.summary       = 'Gem for accessing an international shipping API.'

@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class NotificationType < BaseEnum
     NAMES = {
       0	=> 'None',

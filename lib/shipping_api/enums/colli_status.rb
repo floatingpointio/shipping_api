@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class ColliStatus < BaseEnum
     NAMES = {
       1	=> 'NoPrinting',

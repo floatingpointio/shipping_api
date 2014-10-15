@@ -1,4 +1,4 @@
-module ShippingApi
+module ShippingAPI
   class BillingUnit < BaseEnum
     NAMES = {
       12	=> 'LETT',
