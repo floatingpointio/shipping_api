@@ -28,12 +28,12 @@ client = ShippingAPI::Client.new(
 )
 ```
 
-After you have the client you can interact with the API using client's methods. All methods are a 1-1 mapping to the official API endpoints. The only difference is that Ruby client's method names are in snake_case and the official API endpoint names are camelCase.
+After you have the client you can interact with the API using client's methods. All methods are a 1-1 mapping to the official API endpoints. The only difference is that Ruby client's method names are in snake_case and the official API endpoint names are CamelCase.
 
 If for example wanted to fetch all supported locations you would do:
 
 ```ruby
-response = client.get_locations
+response = client.get_locations 'name_or_postal'
 ```
 
 All response objects are actually Hashes. Depending on the success of the request, the response contains either the fields of the resource specified by the API documentation, or the errors that caused the request to fail.
@@ -59,3 +59,46 @@ The invalid response:
 ```
 
 All resource endpoints are specified in the official [API docs](http://wiki.infranet.hr/index.php?title=Shipping_API_Technical_Reference).
+
+Below is the list of available methods on the client, `params` should be passed as ruby hash containg key-value pairs as specified in official API docs.
+
+```
+get_shipment_status_by_shipment_id(id)
+
+get_shipment_status_by_ref1_and_pickup_date(ref1, pickup_date)
+
+get_shipment_status_by_any_ref(ref_type, search_parameter)
+
+create_shipment_plain(params)
+
+update_shipment_plain(params)
+
+create_shipment(params)
+
+update_shipment(params)
+
+cancel_shipment(shipment_id)
+
+get_shipping_labels_for_single_shipment(shipment_id)
+
+get_shipping_labels_for_all_shipments
+
+get_shipping_labels_for_shipments(shipment_ids)
+
+request_pickup
+
+request_pickup_for_shipments(shipment_ids)
+
+get_pickup_list_contaning_colli(colli_id)
+
+get_possible_date_times_for_shipments(params)
+
+get_locations(name_or_postal)
+
+get_all_pickup_and_delivery_intervals
+
+get_price_information(params)
+
+get_active_shipments
+
+```
